@@ -1,0 +1,38 @@
+// Начните писать стили здесь
+
+/*GLOBAL*/
+@import "global/fonts";
+@import "global/visually-hidden.scss";
+@import "global/global";
+@import "global/variables";
+
+/*BLOCKS*/
+
+/*Index*/
+@import "blocks/page";
+@import "blocks/page-header";
+@import "blocks/site-list";
+@import "blocks/logo";
+@import "blocks/intro";
+@import "blocks/programs";
+@import "blocks/functions";
+@import "blocks/example";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/social-list";
+
+/*Catalog*/
+@import "blocks/catalog";
+@import "blocks/catalog-list";
+@import "blocks/card";
+@import "blocks/catalog-additional";
+@import "blocks/card-row";
+@import "blocks/show-more";
+@import "blocks/offer";
+
+/*Form*/
+@import "blocks/page-selection";
+@import "blocks/form";
+@import "blocks/field-group";
+@import "blocks/field";
+@import "blocks/control";

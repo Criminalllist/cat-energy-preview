@@ -1,0 +1,50 @@
+.page {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  font-family: $sub-font;
+  font-size: 14px;
+  font-weight: 400;
+
+  &__body {
+    margin: 0;
+  }
+}
+
+.title {
+  font-family: $header-font;
+  font-weight: 400;
+}
+
+.text {
+  font-family: $sub-font;
+}
+
+.button {
+  padding: 8px 44px;
+
+  text-align: center;
+
+  font-family: $header-font;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+
+  color: $white;
+  background-color: $green;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #ffffff3d;
+  }
+}
+
+.button-secondary {
+  background-color: $basic-grey;
+  color: $dark-grey;
+}

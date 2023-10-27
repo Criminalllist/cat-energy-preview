@@ -1,0 +1,84 @@
+.field {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  &__title {
+    margin-right: 13px;
+
+    font-family: $header-font;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $dark-grey;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      margin-right: 18px;
+    }
+  }
+
+  &__input {
+    padding: 15px 18px;
+
+    font-family: $header-font;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $dark-grey;
+
+    border: 1px solid #e7e7e7;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+  }
+
+  .input-error:focus {
+    padding: 15px 18px;
+    font-family: $header-font;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $dark-grey;
+
+    border: none;
+    outline: 2px solid #ff8282;
+  }
+
+  .input-error:focus + &__image--mail {
+    stroke: #ff8282;
+  }
+
+  &__input--comment {
+    grid-column: 1 / -1;
+    padding: 12px 15px;
+    min-width: 280px;
+    resize: none;
+    border-left: none;
+    border-right: none;
+
+    @media (min-width: $tablet-width) {
+      min-height: 174px;
+      border: 1px solid #e7e7e7;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 20px;
+  }
+
+  &__image--mail {
+    stroke: #222222;
+  }
+
+  &__input:focus + &__image--mail {
+    stroke: #68b738;
+  }
+}

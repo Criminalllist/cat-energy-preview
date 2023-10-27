@@ -1,0 +1,189 @@
+.functions {
+  padding: 0 20px;
+  margin-bottom: 53px;
+
+  @media (min-width: $deskpot-width) {
+    padding: 0 70px;
+    margin-bottom: 180px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 37px 137px;
+
+      counter-reset: function 0;
+    }
+
+    @media (min-width: $deskpot-width) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 94px 37px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 26px;
+    min-height: 60px;
+
+    @media (min-width: $tablet-width) {
+      min-height: 282px;
+
+      counter-increment: function;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url(./../../img/index/functions/function-1.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(./../../img/index/functions/function-1@2x.png);
+
+        background-size: 60px auto;
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url(./../../img/index/functions/functions-1-tablet.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/functions/function-1-tablet@2x.png);
+
+          background-size: 80px auto;
+        }
+      }
+    }
+
+    &:nth-child(2)::before {
+      background-image: url(./../../img/index/functions/functions-2.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(./../../img/index/functions/function-2@2x.png);
+
+        background-size: 60px auto;
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url(./../../img/index/functions/functions-2-tablet.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/functions/function-2-tablet@2x.png);
+
+          background-size: 80px auto;
+        }
+      }
+    }
+
+    &:nth-child(3)::before {
+      background-image: url(./../../img/index/functions/functions-3.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(./../../img/index/functions/function-3@2x.png);
+
+        background-size: 60px auto;
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url(./../../img/index/functions/functions-3-tablet.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/functions/function-3-tablet@2x.png);
+
+          background-size: 80px auto;
+        }
+      }
+    }
+
+    &:nth-child(4)::before {
+      background-image: url(./../../img/index/functions/functions-4.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(./../../img/index/functions/function-4@2x.png);
+
+        background-size: 60px auto;
+      }
+
+      @media (min-width: $tablet-width) {
+        background-image: url(./../../img/index/functions/functions-4-tablet.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/functions/function-4-tablet@2x.png);
+
+          background-size: 80px auto;
+        }
+      }
+    }
+
+    /*Нумерация функций*/
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: counter(function);
+        position: absolute;
+        z-index: -1;
+        top: -40px;
+        right: 80px;
+
+        font-family: $header-font;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic-grey;
+
+        @media (min-width: $deskpot-width) {
+          left: 120px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 80px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-grey;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $deskpot-width) {
+      width: 227px;
+      br {
+        display: none;
+      }
+    }
+  }
+}

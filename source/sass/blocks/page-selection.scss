@@ -1,0 +1,65 @@
+.page-selection {
+  padding: 0 20px;
+
+  @media (min-width: $deskpot-width) {
+    padding: 0 70px;
+  }
+
+  &__heading {
+    position: relative;
+    margin-bottom: 37px;
+    padding-top: 27px;
+
+    font-family: $header-font;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+
+    @media (max-width: $mobile-only-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -20px;
+        right: -20px;
+        bottom: 0;
+
+        height: 1px;
+        background-color: #d9d9d9;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 54px;
+      margin-left: 39px;
+
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &__subheading {
+    margin-bottom: 39px;
+
+    font-family: $header-font;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 66px;
+      margin-left: 39px;
+
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__contacts {
+    position: relative;
+    margin: 0 -20px;
+
+    @media (min-width: $deskpot-width) {
+      margin: 0 -70px;
+    }
+  }
+}

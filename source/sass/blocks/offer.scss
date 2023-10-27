@@ -1,0 +1,55 @@
+.offer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 289px;
+
+  background-image: url(./../../img/catalog/gift/gift-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  color: $white;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (max-width: $mobile-only-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+  }
+
+  @media (min-width: $deskpot-width) {
+    align-self: flex-start;
+  }
+
+  &__text {
+    padding-top: 130px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-image: url(./../../img/catalog/gift/icon_gift.png);
+      background-repeat: no-repeat;
+      background-position: center 25%;
+    }
+  }
+}

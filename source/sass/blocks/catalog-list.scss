@@ -1,0 +1,22 @@
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+
+  padding: 0 20px;
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: $deskpot-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 80px;
+
+    padding: 0 70px;
+  }
+}

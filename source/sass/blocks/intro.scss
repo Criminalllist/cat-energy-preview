@@ -1,0 +1,112 @@
+.intro {
+  position: relative;
+
+  padding-top: 27px;
+  margin-bottom: 20px;
+
+  font-family: $header-font;
+  color: $white;
+  text-align: center;
+
+  @media (max-width: $mobile-only-width) {
+    background-image: url(./../../img/index/intro_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 768px;
+    color: $dark;
+  }
+
+  @media (min-width: $deskpot-width) {
+    margin-bottom: 82px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -200px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -2;
+
+      background-image: url(./../../img/index/intro/desktop-cat.png);
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+      background-size: cover;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 91px;
+      margin-right: auto;
+      text-align: left;
+      align-items: start;
+    }
+  }
+
+  &__image {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      z-index: -1;
+      bottom: -30px;
+      left: 0;
+      width: 709px;
+      height: 609px;
+    }
+
+    @media (min-width: $deskpot-width) {
+      top: 10%;
+      left: 38%;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 41px;
+    }
+
+    @media (min-width: $deskpot-width) {
+      margin-top: 111px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    margin-bottom: 29px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+
+      margin-bottom: 49px;
+    }
+  }
+
+  &__button {
+    align-self: stretch;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 192px;
+      padding: 14px 26px;
+    }
+  }
+}

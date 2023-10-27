@@ -1,0 +1,97 @@
+.control {
+  font-family: $header-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &--radio {
+    color: $dark-grey-2;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &__title--radio {
+    position: relative;
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: -2px;
+      left: 0px;
+
+      width: 30px;
+      height: 30px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 1px solid #cdcdcd;
+    }
+
+    .control__input:checked + &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 8px;
+
+      margin: auto;
+
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $green;
+    }
+
+    .control__input:focus + &::before {
+      outline: 1px solid black;
+    }
+
+    .control__input:disabled + &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &__title--checkbox {
+    position: relative;
+    padding-left: 42px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 0px;
+      left: 0px;
+
+      width: 26px;
+      height: 26px;
+
+      border: 1px solid #cdcdcd;
+    }
+
+    .control__input:checked + &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 7px;
+
+      width: 15px;
+      height: 15px;
+
+      background-image: url(./../../img/form/checkbox-custom.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .control__input:focus + &::before {
+      outline: 1px solid black;
+    }
+
+    .control__input:disabled + &::after {
+      opacity: 0.3;
+    }
+  }
+}

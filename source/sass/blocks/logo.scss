@@ -1,0 +1,17 @@
+.logo {
+  &__image--tablet {
+    @media (max-width: $mobile-only-width) {
+      display: none;
+    }
+  }
+
+  &__image--cat,
+  &__image--text {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $deskpot-width) {
+  }
+}

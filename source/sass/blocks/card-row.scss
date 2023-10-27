@@ -1,0 +1,93 @@
+.card-row {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 13px 0 19px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    align-items: baseline;
+  }
+
+  @media (min-width: $deskpot-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    align-items: baseline;
+  }
+
+  &__heading {
+    margin-bottom: 13px;
+
+    font-family: $header-font;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $dark-grey-2;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    line-height: 14px;
+    color: $dark-grey;
+
+    @media (min-width: $tablet-width) {
+      justify-content: end;
+      gap: 49px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      justify-content: space-between;
+    }
+  }
+
+  &__definition {
+    white-space: nowrap;
+  }
+
+  &__button {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:active {
+      position: relative;
+
+      box-shadow: 0px 1px 1px $dark-grey;
+      transition: 0.1s;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $deskpot-width) {
+      grid-column: 1 / 3;
+    }
+  }
+}

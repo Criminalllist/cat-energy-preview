@@ -1,0 +1,211 @@
+.programs {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $deskpot-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+
+    padding: 0 70px;
+    margin-bottom: 71px;
+  }
+
+  &__item {
+    background-color: $basic-grey;
+    margin-bottom: 20px;
+
+    padding: 30px 20px 18px;
+
+    @media (min-width: $tablet-width) {
+      padding: 77px 62px 57px 52px;
+    }
+    @media (min-width: $deskpot-width) {
+      width: 570px;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 55px;
+    padding-left: 75px;
+    margin-bottom: 29px;
+
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+      margin-bottom: 24px;
+
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $deskpot-width) {
+      min-height: 100px;
+      padding-left: 150px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: no-repeat;
+
+      @media (min-width: $tablet-width) {
+        min-height: 210px;
+      }
+
+      @media (min-width: $deskpot-width) {
+        min-height: 105px;
+      }
+    }
+
+    &--fit::before {
+      background-image: url(./../../img/index/programs/weight-loss.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(./../../img/index/programs/weight-loss@2x.png);
+        background-size: 50px auto;
+      }
+
+      @media (min-width: $tablet-width) {
+        top: 50%;
+        left: 60%;
+
+        background-image: url(./../../img/index/programs/weight-loss-tablet.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/programs/weight-loss-tablet@2x.png);
+          background-size: 200px auto;
+        }
+      }
+
+      @media (min-width: $deskpot-width) {
+        top: 0;
+        left: 0;
+
+        background-image: url(./../../img/index/programs/weight-loss-desktop.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/programs/weight-loss-desktop@2x.png);
+          background-size: 100px auto;
+        }
+      }
+    }
+
+    &--gain {
+      @media (min-width: $deskpot-width) {
+        padding-left: 170px;
+      }
+    }
+
+    &--gain::before {
+      top: 0;
+      left: -10px;
+      background-image: url(./../../img/index/programs/weight-gain.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(./../../img/index/programs/weight-gain@2x.png);
+        background-size: 67px auto;
+      }
+
+      @media (min-width: $tablet-width) {
+        top: 50%;
+        left: 55%;
+
+        background-image: url(./../../img/index/programs/weight-gain-tablet.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/programs/weight-gain-tablet@2x.png);
+          background-size: 270px auto;
+        }
+      }
+
+      @media (min-width: $deskpot-width) {
+        top: 0;
+        left: 0;
+
+        background-image: url(./../../img/index/programs/weight-gain-desktop.png);
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(./../../img/index/programs/weight-gain-desktop@2x.png);
+          background-size: 134px auto;
+        }
+      }
+    }
+  }
+
+  &__text {
+    width: 227px;
+
+    padding-bottom: 23px;
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid #d9d9d9;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 340px;
+
+      font-size: 16px;
+      line-height: 24px;
+
+      border-bottom: none;
+      margin-bottom: 52px;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $deskpot-width) {
+      width: 467px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 49px;
+
+    font-size: 16px;
+    line-height: 16px;
+    font-family: $header-font;
+    text-transform: uppercase;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      background-image: url(./../../img/index/programs/icon_arrow.png);
+      background-size: 32px 10px;
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+  }
+}

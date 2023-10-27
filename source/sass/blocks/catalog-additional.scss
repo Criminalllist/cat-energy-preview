@@ -1,0 +1,121 @@
+.catalog-additional {
+  padding: 0 20px;
+  margin-bottom: 35px;
+
+  @media (min-width: $deskpot-width) {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 70px;
+  }
+
+  &__heading {
+    position: relative;
+    margin-bottom: 36px;
+
+    font-family: $header-font;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $dark;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 80%;
+      right: -20px;
+      bottom: 0;
+      margin: auto;
+
+      height: 2px;
+      background-color: $green;
+    }
+
+    @media (max-width: $mobile-only-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        left: -20px;
+        right: -20px;
+        bottom: 0;
+
+        height: 1px;
+        background-color: #d9d9d9;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -20px;
+        right: 101%;
+        bottom: 0;
+        margin: auto;
+
+        height: 2px;
+        background-color: $green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 370px;
+        right: -20px;
+        bottom: 0;
+        margin: auto;
+
+        height: 2px;
+        background-color: $green;
+      }
+    }
+
+    @media (min-width: $deskpot-width) {
+      margin-bottom: 80px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -70px;
+        right: 101%;
+        bottom: 0;
+        margin: auto;
+
+        height: 2px;
+        background-color: $green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 370px;
+        right: -70px;
+        bottom: 0;
+        margin: auto;
+
+        height: 2px;
+        background-color: $green;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 35px;
+  }
+}
+
+.catalog-additional__wrapper {
+  @media (min-width: $deskpot-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 80px;
+  }
+}
